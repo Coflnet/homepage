@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ template "header" }}
+
+<!-- Main -->
+<main class="container">
+
+        {{range $project := .Projects }}
+        <section>
+            <hgroup>
+                <h2>{{ $project.Title }}</h2>
+            </hgroup>
+            <p>
+                {{ $project.Description }}
+            </p>
+        </section>
+        <aside>
+            <figure>
+                <img src="{{ $project.ImagePath }}" alt="Corporate Image" />
+                <figcaption>
+                    Image from
+                    <a href="https://unsplash.com/photos/3Ijt7UkSBYE" target="_blank">unsplash.com</a>
+                </figcaption>
+            </figure>
+        </aside>
+        {{end}}
+</main>
+
+<!-- Subscribe <-</-->
+{{ template "contact-form" }}
+
+<!-- ./ Subscribe -->
+
+{{ template "footer" }}
+
+</body>
+</html>
