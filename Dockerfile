@@ -11,13 +11,13 @@ RUN go mod download
 
 # FROM build_base AS server_builder
 COPY . .
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
+RUN CGO_ENABLED=0 go build ./cmd/homepage/main.go
 
 
 # final stage
 # add scratch when dev is done
 FROM scratch
-COPY --from=builder /app/homepage /app/
+COPY --from=builder /app/main /app/
 
 EXPOSE 9658
-ENTRYPOINT ["/app/homepage"]
+ENTRYPOINT ["/app/main"]
