@@ -17,7 +17,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build
 # final stage
 # add scratch when dev is done
 FROM scratch
-COPY --from=builder /app/hana_sql_exporter /app/
+COPY --from=builder /app/homepage /app/
 
 EXPOSE 9658
 ENTRYPOINT ["/app/homepage"]
