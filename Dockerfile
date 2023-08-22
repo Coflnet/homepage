@@ -16,7 +16,7 @@ RUN CGO_ENABLED=0 go build ./cmd/homepage/main.go
 
 # final stage
 # add scratch when dev is done
-FROM scratch
+FROM alpine:3
 
 COPY --from=builder /app/main /app/
 COPY --from=builder /app/internal/views /app/internal/views
