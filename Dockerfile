@@ -17,7 +17,10 @@ RUN CGO_ENABLED=0 go build ./cmd/homepage/main.go
 # final stage
 # add scratch when dev is done
 FROM scratch
+
 COPY --from=builder /app/main /app/
+COPY --from=builder /app/internal/views /app/internal/views
+WORKDIR /app
 
 EXPOSE 9658
 ENTRYPOINT ["/app/main"]
