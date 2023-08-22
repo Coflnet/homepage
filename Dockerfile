@@ -20,6 +20,7 @@ FROM scratch
 
 COPY --from=builder /app/main /app/
 COPY --from=builder /app/internal/views /app/internal/views
+COPY --from=builder /app/static /app/static
 WORKDIR /app
 
 EXPOSE 9658
