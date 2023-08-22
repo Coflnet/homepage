@@ -10,7 +10,7 @@ func ListProjects() []Project {
 	projects := []Project{
 		{
 			Title:       "BDR Projekt",
-			Description: "Wir haben in einem Forschungsprojekt für die Regierung ein neues System entwickelt, welches die Kommunikation zwischen den Bürgern und der Regierung vereinfachen soll.",
+			Description: "insert text here",
 			ImagePath:   "static/bdr-image.jpeg",
 		},
 		{
