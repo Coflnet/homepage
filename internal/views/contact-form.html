@@ -2,14 +2,14 @@
     <div class="container">
         <article>
             <hgroup>
-                <h2>Kontaktformular</h2>
-                <h3>Du brauchst Hilfe?</h3>
+                <h2>{{ .Header }}</h2>
+                <h3>{{ .Description }}</h3>
             </hgroup>
             <form hx-post="/contact" >
                 <div class="grid">
 
                     <label for="firstname">
-                        First name
+                        {{ .Firstname }}
                         <input type="text" id="firstname" name="firstname" placeholder="First name" required>
                     </label>
 

@@ -1,0 +1,28 @@
+CompanyName = "Coflnet"
+CompanyDescription = "Coflnet is a company that does stuff"
+
+ThemeSwitchText = "Theme"
+BlogLinkText = "Blog"
+
+ImprintText = "Imprint"
+
+ContactFormHeader = "Contact form"
+ContactFormDescription = "Please fill out the form below to contact us."
+ContactFormFirstname = "Firstname"
+ContactFormLastname = "Lastname"
+ContactFormEmail = "Email"
+ContactFormMessage = "Message"
+ContactFormSendText = "Send"
+
+
+CoflnetTitle = "Skyblock project was kinda funny"
+CoflnetDescription = "TODO generate text via chat gpt"
+CoflnetImageCaption = "TODO generate text via image generator"
+
+FDZTitle = "fancy research project"
+FDZDescription = "TODO generate text via chat gpt"
+FDZImageCaption = "TODO generate text via image generator"
+
+CAITTitle = "data science project"
+CAITDescription = "TODO generate text via chat gpt"
+CAITImageCaption = "TODO generate text via image generator"

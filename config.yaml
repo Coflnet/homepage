@@ -1,0 +1,16 @@
+projects:
+  - name: Coflnet
+    title: CoflnetTitle
+    description: CoflnetDescription
+    imagePath: /static/sky-image.jpg
+    imageCaption: CoflnetImageCaption
+  - name: FDZ
+    title: FDZTitle
+    description: FDZDescription
+    imagePath: /static/bdr-image.jpeg
+    imageCaption: FDZImageCaption
+  - name: CAIT
+    title: CAITTitle
+    description: CAITDescription
+    imageCaption: CAITImageCaption
+    imagePath: /static/cait-image.jpg

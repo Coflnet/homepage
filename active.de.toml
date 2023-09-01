@@ -1,0 +1,23 @@
+[CAITDescription]
+hash = "sha1-88f4a49e5c733cf9c196564a64f7248aad320a57"
+other = "Das CAIT Projekt war wunderbar"
+
+[CAITTitle]
+hash = "sha1-f495368d60873d32d32f19e21e01591f23ab2c1b"
+other = "cait t d"
+
+[CoflnetDescription]
+hash = "sha1-b0a91ad41c70131f8c8f51ed75807b60fdfa98d2"
+other = "coflnet d d"
+
+[CoflnetTitle]
+hash = "sha1-6b3a269a1bb04a63019dca6bcd89e3c18daf3ed9"
+other = "coflnet t d"
+
+[FDZDescription]
+hash = "sha1-0394c1e20f927ed9826089240756fe2dc2d5a4fd"
+other = "fdz d d"
+
+[FDZTitle]
+hash = "sha1-8b4f0b33e5f3e7b8d6259f1f091bc1136894f597"
+other = "fdz t d"

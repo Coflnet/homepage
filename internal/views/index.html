@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{{ template "header" }}
+{{ template "header.html" . }}
 
 <!-- Main -->
 <main class="container">
@@ -17,10 +17,9 @@
         </section>
         <aside>
             <figure>
-                <img src="{{ $project.ImagePath }}" alt="Corporate Image" />
+                <img src="{{ $project.ImagePath }}" alt="Corporate Image" height="800" width="600"/>
                 <figcaption>
-                    Image from
-                    <a href="https://unsplash.com/photos/3Ijt7UkSBYE" target="_blank">unsplash.com</a>
+                    {{ $project.ImageCaption }}
                 </figcaption>
             </figure>
         </aside>
@@ -28,11 +27,11 @@
 </main>
 
 <!-- Subscribe <-</-->
-{{ template "contact-form" }}
+{{ template "contact-form.html" .ContactFormData }}
 
 <!-- ./ Subscribe -->
 
-{{ template "footer" }}
+{{ template "footer.html" . }}
 
 </body>
 </html>

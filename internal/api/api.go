@@ -1,51 +1,92 @@
 package api
 
 import (
+	"html/template"
+	"log/slog"
+	"net/http"
+
 	"github.com/Coflnet/homepage/internal/usecase"
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/logger"
-	"github.com/gofiber/template/html/v2"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 )
 
-func StartWebserver() error {
+type WebServer struct {
+	config     *usecase.Config
+	translator *usecase.Translator
+}
 
-	engine := html.New("./internal/views", ".html")
+func NewWebServer(config *usecase.Config, translator *usecase.Translator) *WebServer {
+	return &WebServer{
+		config:     config,
+		translator: translator,
+	}
+}
 
-	app := fiber.New(fiber.Config{
-		AppName: "Coflnet",
-		Views:   engine,
-	})
+func (s *WebServer) StartServer() error {
+	r := chi.NewRouter()
 
-	app.Use(logger.New())
+	r.Use(middleware.Logger)
+	r.Use(middleware.Recoverer)
 
-	app.Static("/static", "./static")
+	r.Get("/", s.handleHome)
+	r.Get("/impressum", s.handleImprint)
+	r.Post("/contact", s.handleContactFormPost)
 
-	app.Get("/", func(c *fiber.Ctx) error {
-		projects := usecase.ListProjects()
+	fs := http.FileServer(http.Dir("./static/"))
+	r.Handle("/static/*", http.StripPrefix("/static", fs))
 
-		// render the index template in ../views/
-		return c.Render("index", fiber.Map{
-			"Projects": projects,
-		})
-	})
+	return http.ListenAndServe(":3000", r)
+}
 
-    app.Get("/impressum", func(c *fiber.Ctx) error {
-        return c.Render("impressum", fiber.Map{})
-    })
+func (s *WebServer) handleHome(w http.ResponseWriter, r *http.Request) {
+	lang := r.Header.Get("Accept-Language")
 
-    app.Post("/contact", func(c *fiber.Ctx) error {
-        firstname := c.FormValue("firstname")
-        lastname := c.FormValue("lastname")
-        email := c.FormValue("email")
-        message := c.FormValue("message")
-        err := usecase.SendContactMessage(firstname, lastname, email, message)
+	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+	projects := s.config.ListProjects()
+	websiteData := s.translator.RetrieveWebsiteDataWithProjects(lang, projects)
 
-        if err != nil {
-            return c.Status(200).Render("contact-error", fiber.Map{})
-        }
+	err := tmpl.ExecuteTemplate(w, "index.html", websiteData)
+	if err != nil {
+		slog.Error("Error while executing template: ", "err", err)
+		return
+	}
+}
 
-        return c.Render("contact-success", fiber.Map{})
-    })
+func (s *WebServer) handleImprint(w http.ResponseWriter, r *http.Request) {
+    lang := r.Header.Get("Accept-Language")
 
-	return app.Listen(":3000")
+	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+    websiteData := s.translator.RetrieveWebsiteData(lang)
+
+	err := tmpl.ExecuteTemplate(w, "impressum.html", websiteData)
+	if err != nil {
+		slog.Error("Error while executing template: ", "err", err)
+		return
+	}
+}
+
+func (s *WebServer) handleContactFormPost(w http.ResponseWriter, r *http.Request) {
+	firstname := r.FormValue("firstname")
+	lastname := r.FormValue("lastname")
+	email := r.FormValue("email")
+	message := r.FormValue("message")
+
+	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+
+	err := usecase.SendContactMessage(firstname, lastname, email, message)
+	if err != nil {
+		slog.Error("Error while sending contact message: ", "err", err)
+
+		err = tmpl.ExecuteTemplate(w, "contact-error.html", nil)
+		if err != nil {
+			slog.Error("Error while executing template: ", "err", err)
+			return
+		}
+		return
+	}
+
+	err = tmpl.ExecuteTemplate(w, "contact-success.html", nil)
+	if err != nil {
+		slog.Error("Error while executing template: ", "err", err)
+	}
 }
