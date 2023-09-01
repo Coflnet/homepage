@@ -1,23 +1,83 @@
+[BlogLinkText]
+hash = "sha1-0b9d2b2362bc33581ba11fddcb0cf0590ebd3a7a"
+other = "Blog"
+
 [CAITDescription]
-hash = "sha1-88f4a49e5c733cf9c196564a64f7248aad320a57"
-other = "Das CAIT Projekt war wunderbar"
+hash = "sha1-2678e2585e505b8a0cc708dbfbb15e33800f986e"
+other = "TODO generierter Text mit Chat GPT"
+
+[CAITImageCaption]
+hash = "sha1-52a4d17863781d811cfcaaf562d2c8882a3cc871"
+other = "TODO generierter Text mit Image Generator"
 
 [CAITTitle]
-hash = "sha1-f495368d60873d32d32f19e21e01591f23ab2c1b"
-other = "cait t d"
+hash = "sha1-ac7d8bc517275d07a97d781d717ed8facc5b7441"
+other = "data science projekt"
 
 [CoflnetDescription]
-hash = "sha1-b0a91ad41c70131f8c8f51ed75807b60fdfa98d2"
-other = "coflnet d d"
+hash = "sha1-2678e2585e505b8a0cc708dbfbb15e33800f986e"
+other = "TODO generierter Text mit Chat GPT"
+
+[CoflnetImageCaption]
+hash = "sha1-52a4d17863781d811cfcaaf562d2c8882a3cc871"
+other = "TODO generierter Text mit Image Generator"
 
 [CoflnetTitle]
-hash = "sha1-6b3a269a1bb04a63019dca6bcd89e3c18daf3ed9"
-other = "coflnet t d"
+hash = "sha1-b9b81a87ef6ee744c99c8bec49188a0f4658bd85"
+other = "Skyblock project was kinda funny"
+
+[CompanyDescription]
+hash = "sha1-81793c3a389d8e8dd9ca62c26bf5c451f36f8585"
+other = "Coflnet is a company that does stuff"
+
+[CompanyName]
+hash = "sha1-af15a688896f53b82830f18b16abbd01ee8d4a56"
+other = "Coflnet"
+
+[ContactFormDescription]
+hash = "sha1-1f11c5043f4fc91f04e77d36c458ca267b95bba1"
+other = "Füll diese Felder aus, um uns zu kontaktieren."
+
+[ContactFormEmail]
+hash = "sha1-84add5b2952787581cb9a8851eef63d1ec75d22b"
+other = "E-Mail Adresse"
+
+[ContactFormFirstname]
+hash = "sha1-cf23ba48c06d7e6d4b41a205bfb3cac3bb7b1e38"
+other = "Vorname"
+
+[ContactFormHeader]
+hash = "sha1-d927866c0f703b98340e34d440bb3842131e8875"
+other = "Kontaktformular"
+
+[ContactFormLastname]
+hash = "sha1-639860fbb86cea7f96e287fa3fecca62e4bb42f8"
+other = "Nachname"
+
+[ContactFormMessage]
+hash = "sha1-68f4145fee7dde76afceb910165924ad14cf0d00"
+other = "Nachricht"
+
+[ContactFormSendText]
+hash = "sha1-9bc2575c3930437e80555f78757b783c842e8e66"
+other = "Absenden"
 
 [FDZDescription]
-hash = "sha1-0394c1e20f927ed9826089240756fe2dc2d5a4fd"
-other = "fdz d d"
+hash = "sha1-2678e2585e505b8a0cc708dbfbb15e33800f986e"
+other = "TODO generierter Text mit Chat GPT"
+
+[FDZImageCaption]
+hash = "sha1-52a4d17863781d811cfcaaf562d2c8882a3cc871"
+other = "TODO generierter Text mit Image Generator"
 
 [FDZTitle]
-hash = "sha1-8b4f0b33e5f3e7b8d6259f1f091bc1136894f597"
-other = "fdz t d"
+hash = "sha1-eaf1eac9e46f29e9d439e9e68147a713d72afd61"
+other = "fancy research projekt"
+
+[ImprintText]
+hash = "sha1-db71e0bfdd6b22014556039ac1d59c60c65b4e4e"
+other = "Impressum"
+
+[ThemeSwitchText]
+hash = "sha1-a797e30923ac1be590300ce6b08e63b4e6dc6688"
+other = "Design"
