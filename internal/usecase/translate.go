@@ -48,6 +48,9 @@ type WebsiteData struct {
 	CompanyName        string
 	CompanyDescription string
 	ThemeSwitchText    string
+	ThemeSwitchAuto  string
+	ThemeSwitchLight string
+	ThemeSwitchBlack string
 	BlogLinkText       string
 	ImprintText        string
 	ContactFormData    ContactFormData
@@ -68,6 +71,9 @@ func (t *Translator) RetrieveWebsiteData(lang string) *WebsiteData {
 		CompanyName:        t.Translate("CompanyName", lang),
 		CompanyDescription: t.Translate("CompanyDescription", lang),
 		ThemeSwitchText:    t.Translate("ThemeSwitchText", lang),
+        ThemeSwitchAuto:  t.Translate("ThemeSwitchAuto", lang),
+        ThemeSwitchLight: t.Translate("ThemeSwitchLight", lang),
+        ThemeSwitchBlack: t.Translate("ThemeSwitchBlack", lang),
 		BlogLinkText:       t.Translate("BlogLinkText", lang),
 		ImprintText:        t.Translate("ImprintText", lang),
 		ContactFormData: ContactFormData{
