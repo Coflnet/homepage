@@ -21,6 +21,7 @@ FROM alpine:3
 COPY --from=builder /app/main /app/
 COPY --from=builder /app/internal/views /app/internal/views
 COPY --from=builder /app/static /app/static
+COPY --from=builder /app/config.yaml /app/config.yaml
 WORKDIR /app
 
 EXPOSE 9658
