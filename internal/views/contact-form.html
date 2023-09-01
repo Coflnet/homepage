@@ -24,7 +24,7 @@
                 <input type="email" id="email" name="email" placeholder="{{ .Email }}" required>
 
                 <label for="message">{{ .Message }}</label>
-                <textarea id="message" name="message" placeholder="{{ .Message }}" rows="5" required maxlength="1000"></textarea>
+                <textarea id="message" name="message" placeholder="{{ .Message }}" rows="5" required maxlength="1000" style="resize:vertical"></textarea>
 
                 <button type="submit">{{ .SendText }}</button>
             </form>
