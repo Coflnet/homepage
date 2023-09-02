@@ -7,7 +7,6 @@
             </hgroup>
             <form hx-post="/contact" >
                 <div class="grid">
-
                     <label for="firstname">
                         {{ .Firstname }}
                         <input type="text" id="firstname" name="firstname" placeholder="{{ .Firstname }}" required>
@@ -17,7 +16,6 @@
                         {{ .Lastname }}
                         <input type="text" id="lastname" name="lastname" placeholder="{{ .Lastname }}" required>
                     </label>
-
                 </div>
 
                 <label for="email">{{ .Email }}</label>
