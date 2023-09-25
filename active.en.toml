@@ -23,7 +23,7 @@ With their expertise in devops and development, our consultant has helped us cre
 """
 CoflnetImageCaption = "TODO generate text via image generator"
 CoflnetTitle = "Skyblock Auction House History"
-CompanyDescription = "This website is WIP (Work in progress) most of the stuff is unfinalized and most likely I was drunk when I wrote it."
+CompanyDescription = ""
 CompanyName = "Coflnet"
 ContactFormDescription = "Please fill out the form below to contact us."
 ContactFormEmail = "Email"
