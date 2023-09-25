@@ -8,6 +8,7 @@ import (
 	"github.com/Coflnet/homepage/internal/usecase"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
+	"github.com/go-chi/hostrouter"
 )
 
 type WebServer struct {
@@ -28,6 +29,19 @@ func (s *WebServer) StartServer() error {
 	r.Use(middleware.Logger)
 	r.Use(middleware.Recoverer)
 
+	hr := hostrouter.New()
+
+	hr.Map("consulting.coflnet.com", s.StartConsultingPage())
+	hr.Map("*", s.StartHomepage())
+
+	r.Mount("/", hr)
+
+	return http.ListenAndServe(":3000", r)
+}
+
+func (s *WebServer) StartHomepage() chi.Router {
+
+	r := chi.NewRouter()
 	r.Get("/", s.handleHome)
 	r.Get("/impressum", s.handleImprint)
 	r.Post("/contact", s.handleContactFormPost)
@@ -35,7 +49,14 @@ func (s *WebServer) StartServer() error {
 	fs := http.FileServer(http.Dir("./static/"))
 	r.Handle("/static/*", http.StripPrefix("/static", fs))
 
-	return http.ListenAndServe(":3000", r)
+	return r
+}
+
+func (s *WebServer) StartConsultingPage() chi.Router {
+	r := chi.NewRouter()
+	r.Get("/", s.handleHome)
+
+	return r
 }
 
 func (s *WebServer) handleHome(w http.ResponseWriter, r *http.Request) {
@@ -45,7 +66,7 @@ func (s *WebServer) handleHome(w http.ResponseWriter, r *http.Request) {
 	projects := s.config.ListProjects()
 	websiteData := s.translator.RetrieveWebsiteDataWithProjects(lang, projects)
 
-	err := tmpl.ExecuteTemplate(w, "index.html", websiteData)
+	err := tmpl.ExecuteTemplate(w, "homepage.html", websiteData)
 	if err != nil {
 		slog.Error("Error while executing template: ", "err", err)
 		return
@@ -53,10 +74,10 @@ func (s *WebServer) handleHome(w http.ResponseWriter, r *http.Request) {
 }
 
 func (s *WebServer) handleImprint(w http.ResponseWriter, r *http.Request) {
-    lang := r.Header.Get("Accept-Language")
+	lang := r.Header.Get("Accept-Language")
 
 	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
-    websiteData := s.translator.RetrieveWebsiteData(lang)
+	websiteData := s.translator.RetrieveWebsiteData(lang)
 
 	err := tmpl.ExecuteTemplate(w, "impressum.html", websiteData)
 	if err != nil {

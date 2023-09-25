@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ template "header.html" . }}
+
+<!-- Main -->
+<main class="container">
+
+        {{range $project := .Projects }}
+        <!-- centered figure -->
+        <figure class="container" >
+            <img src="{{ $project.ImagePath }}" alt="Corporate Image" class="center"/>
+        </figure>
+
+        <style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%
+}
+</style>
+
+        <section>
+            <hgroup>
+                <h2>{{ $project.Title }}</h2>
+            </hgroup>
+            <p>
+                {{ $project.Description }}
+            </p>
+        </section>
+        {{end}}
+</main>
+
+<!-- Subscribe <-</-->
+{{ template "contact-form.html" .ContactFormData }}
+
+<!-- ./ Subscribe -->
+
+{{ template "footer.html" . }}
+
+</body>
+</html>
