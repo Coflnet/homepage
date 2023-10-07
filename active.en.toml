@@ -1,27 +1,8 @@
 BlogLinkText = "Blog"
-
-CoflnetDescription = """Coflnet’s Skyblock Auction House History is a website that allows users to browse through over 500 million auctions, over two million players, and the bazaar of Hypixel Skyblock.
-\n\
-The website provides a wealth of information about current and historic prices for the auction house and bazaar, and allows users to view, search, browse, and filter by reforge or enchantment.\
-\n\
-In addition to the auction house history, Coflnet also offers an Item Flipper tool that helps users find profitable flips by comparing new auctions with the sell price of already finished auctions of the same item with the same or similar modifiers (e.g. enchantments) and/or comparing to lowest bin.\
-\n\n\
-The flipper is available in both a free and a premium version, with the premium version offering more recent flips and additional features.\
-\n\
-Coflnet also offers a mod for Hypixel Skyblock that provides users with data directly in the game. The CoflMod allows users to access price paid, the Auction Flipper, median price, lowest BIN, bazaar prices and more.\
-\n\n\
-Overall, Coflnet’s Skyblock Auction House History website and associated tools provide a valuable resource for players of Hypixel Skyblock looking to stay informed about the game’s economy and make informed decisions about buying and selling items."\
-"""
-
+CAITDescription = "Our devops/developer consultant has played an instrumental role in the development of our cutting-edge article processing platform. This platform uses advanced algorithms to provide highly targeted ad recommendations, ensuring that our clients’ ads reach the right audience at the right time.In addition to the ad recommendation system, our consultant also helped build a robust scraping system that automatically collects articles from various sources. This system feeds into the article processing platform, providing a constant stream of fresh content for analysis.With their expertise in devops and development, our consultant has helped us create a powerful and efficient system that delivers real results for our clients. We are proud to have them as part of our team. Is there anything else you would like me to add? 😊"
 CAITImageCaption = "TODO generate text via image generator"
 CAITTitle = "NlpData processing / Scraping system"
-CAITDescription = """\
-Our devops/developer consultant has played an instrumental role in the development of our cutting-edge article processing platform. This platform uses advanced algorithms to provide highly targeted ad recommendations, ensuring that our clients’ ads reach the right audience at the right time.\
-\
-In addition to the ad recommendation system, our consultant also helped build a robust scraping system that automatically collects articles from various sources. This system feeds into the article processing platform, providing a constant stream of fresh content for analysis.\
-\
-With their expertise in devops and development, our consultant has helped us create a powerful and efficient system that delivers real results for our clients. We are proud to have them as part of our team. Is there anything else you would like me to add? 😊\
-"""
+CoflnetDescription = "Coflnet’s Skyblock Auction House History is a website that allows users to browse through over 500 million auctions, over two million players, and the bazaar of Hypixel Skyblock.\n\nThe website provides a wealth of information about current and historic prices for the auction house and bazaar, and allows users to view, search, browse, and filter by reforge or enchantment.\nIn addition to the auction house history, Coflnet also offers an Item Flipper tool that helps users find profitable flips by comparing new auctions with the sell price of already finished auctions of the same item with the same or similar modifiers (e.g. enchantments) and/or comparing to lowest bin.\n\nThe flipper is available in both a free and a premium version, with the premium version offering more recent flips and additional features.\nCoflnet also offers a mod for Hypixel Skyblock that provides users with data directly in the game. The CoflMod allows users to access price paid, the Auction Flipper, median price, lowest BIN, bazaar prices and more.\n\nOverall, Coflnet’s Skyblock Auction House History website and associated tools provide a valuable resource for players of Hypixel Skyblock looking to stay informed about the game’s economy and make informed decisions about buying and selling items.\""
 CoflnetImageCaption = "TODO generate text via image generator"
 CoflnetTitle = "Skyblock Auction House History"
 CompanyDescription = " "
@@ -33,13 +14,7 @@ ContactFormHeader = "Contact form"
 ContactFormLastname = "Lastname"
 ContactFormMessage = "Message"
 ContactFormSendText = "Send"
-FDZDescription = """\
-As DevOps consultants, we have been working closely with leading research institutions and healthcare organizations in Germany to develop a cutting-edge platform for disease research. Our expertise in DevOps methodologies and technologies has enabled us to create a robust, scalable, and secure platform that facilitates collaboration and data sharing among researchers, clinicians, and other stakeholders. \
-\
-Our platform leverages the latest advances in cloud computing, data analytics, and machine learning to provide researchers with powerful tools for analyzing large datasets and discovering new insights into the causes, prevention, and treatment of diseases. By streamlining workflows and automating routine tasks, we are helping to accelerate the pace of discovery and improve patient outcomes.\
-\
-We are proud to be part of this important initiative and are committed to continuing our work to advance the state of disease research in Germany. Together, we are making a real difference in the lives of patients and their families. Is there anything else you would like me to add? 😊"\
-"""
+FDZDescription = "As DevOps consultants, we have been working closely with leading research institutions and healthcare organizations in Germany to develop a cutting-edge platform for disease research. Our expertise in DevOps methodologies and technologies has enabled us to create a robust, scalable, and secure platform that facilitates collaboration and data sharing among researchers, clinicians, and other stakeholders. Our platform leverages the latest advances in cloud computing, data analytics, and machine learning to provide researchers with powerful tools for analyzing large datasets and discovering new insights into the causes, prevention, and treatment of diseases. By streamlining workflows and automating routine tasks, we are helping to accelerate the pace of discovery and improve patient outcomes.We are proud to be part of this important initiative and are committed to continuing our work to advance the state of disease research in Germany. Together, we are making a real difference in the lives of patients and their families. Is there anything else you would like me to add? 😊\""
 FDZImageCaption = "TODO generate text via image generator"
 FDZTitle = "fancy research project"
 ImprintText = "Imprint"

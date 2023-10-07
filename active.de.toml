@@ -3,32 +3,32 @@ hash = "sha1-0b9d2b2362bc33581ba11fddcb0cf0590ebd3a7a"
 other = "Blog"
 
 [CAITDescription]
-hash = "sha1-2678e2585e505b8a0cc708dbfbb15e33800f986e"
-other = "TODO generierter Text mit Chat GPT"
+hash = "sha1-4198dead47d33d37d9c7dec1ea0025f48a2d26d8"
+other = "Our devops/developer consultant has played an instrumental role in the development of our cutting-edge article processing platform. This platform uses advanced algorithms to provide highly targeted ad recommendations, ensuring that our clients’ ads reach the right audience at the right time.In addition to the ad recommendation system, our consultant also helped build a robust scraping system that automatically collects articles from various sources. This system feeds into the article processing platform, providing a constant stream of fresh content for analysis.With their expertise in devops and development, our consultant has helped us create a powerful and efficient system that delivers real results for our clients. We are proud to have them as part of our team. Is there anything else you would like me to add? 😊"
 
 [CAITImageCaption]
 hash = "sha1-52a4d17863781d811cfcaaf562d2c8882a3cc871"
-other = "TODO generierter Text mit Image Generator"
+other = "TODO generate text via image generator"
 
 [CAITTitle]
-hash = "sha1-ac7d8bc517275d07a97d781d717ed8facc5b7441"
-other = "data science projekt"
+hash = "sha1-73a00aad6298b9cab039c2203c02e415959c5359"
+other = "NlpData processing / Scraping system"
 
 [CoflnetDescription]
-hash = "sha1-2678e2585e505b8a0cc708dbfbb15e33800f986e"
-other = "TODO generierter Text mit Chat GPT"
+hash = "sha1-8df538a858fddeff5c971bfb73801e08281c6dfb"
+other = "Coflnet Skyblock Auction House History ist eine website, die den Nutzern erlaubt über 600 Millionen Auktionen, über 2 Millionen Spielern und dem Bazaar von Hypixel Skyblock zu durchsuchen.\n\nDie Website stellt viele Informationen zu historischen und aktuellen Preisen des Auktionshaus und Bazaar zur Verfügung, und es erlaubt den Nutzern diese anzuzeigen, zu durchsuchen und zu filtern.\nAußerdem gibt es auch den Item Flipper, dieses Tool hilft dem Nutzer porfitable Flips zu finden.\n\nDer Flipper ist sowohl als kostenfreie als auch als Premium Version zu verwenden, mit der Premium Variante werden Flips schneller angezeigt, außerdem gibt es noch ein paar zusätzliche Features."
 
 [CoflnetImageCaption]
 hash = "sha1-52a4d17863781d811cfcaaf562d2c8882a3cc871"
-other = "TODO generierter Text mit Image Generator"
+other = "TODO generate text via image generator"
 
 [CoflnetTitle]
-hash = "sha1-b9b81a87ef6ee744c99c8bec49188a0f4658bd85"
-other = "Skyblock project was kinda funny"
+hash = "sha1-932dd4281a15847beeae0a71ccc751fae7973179"
+other = "Skyblock Auction House History"
 
 [CompanyDescription]
-hash = "sha1-81793c3a389d8e8dd9ca62c26bf5c451f36f8585"
-other = "Coflnet is a company that does stuff"
+hash = "sha1-b858cb282617fb0956d960215c8e84d1ccf909c6"
+other = " "
 
 [CompanyName]
 hash = "sha1-af15a688896f53b82830f18b16abbd01ee8d4a56"
@@ -36,11 +36,11 @@ other = "Coflnet"
 
 [ContactFormDescription]
 hash = "sha1-1f11c5043f4fc91f04e77d36c458ca267b95bba1"
-other = "Füll diese Felder aus, um uns zu kontaktieren."
+other = "Fülle einfache diese Felder aus, um uns zu kontaktieren"
 
 [ContactFormEmail]
 hash = "sha1-84add5b2952787581cb9a8851eef63d1ec75d22b"
-other = "E-Mail Adresse"
+other = "E-Mail"
 
 [ContactFormFirstname]
 hash = "sha1-cf23ba48c06d7e6d4b41a205bfb3cac3bb7b1e38"
@@ -63,34 +63,41 @@ hash = "sha1-9bc2575c3930437e80555f78757b783c842e8e66"
 other = "Absenden"
 
 [FDZDescription]
-hash = "sha1-2678e2585e505b8a0cc708dbfbb15e33800f986e"
-other = "TODO generierter Text mit Chat GPT"
+hash = "sha1-f214772539afe0bc36851fbbd2ad3da46d564ceb"
+other = "As DevOps consultants, we have been working closely with leading research institutions and healthcare organizations in Germany to develop a cutting-edge platform for disease research. Our expertise in DevOps methodologies and technologies has enabled us to create a robust, scalable, and secure platform that facilitates collaboration and data sharing among researchers, clinicians, and other stakeholders. Our platform leverages the latest advances in cloud computing, data analytics, and machine learning to provide researchers with powerful tools for analyzing large datasets and discovering new insights into the causes, prevention, and treatment of diseases. By streamlining workflows and automating routine tasks, we are helping to accelerate the pace of discovery and improve patient outcomes.We are proud to be part of this important initiative and are committed to continuing our work to advance the state of disease research in Germany. Together, we are making a real difference in the lives of patients and their families. Is there anything else you would like me to add? 😊\""
 
 [FDZImageCaption]
 hash = "sha1-52a4d17863781d811cfcaaf562d2c8882a3cc871"
-other = "TODO generierter Text mit Image Generator"
+other = "TODO generate text via image generator"
 
 [FDZTitle]
 hash = "sha1-eaf1eac9e46f29e9d439e9e68147a713d72afd61"
-other = "fancy research projekt"
+other = "fancy research project"
 
 [ImprintText]
 hash = "sha1-db71e0bfdd6b22014556039ac1d59c60c65b4e4e"
 other = "Impressum"
 
-[ThemeSwitchText]
-hash = "sha1-a797e30923ac1be590300ce6b08e63b4e6dc6688"
-other = "Design"
+[LegalPolicyText]
+hash = "sha1-0c8a9a95e21aeb403402ed64338810d787cc5f91"
+other = "Geschäftsbedingungen"
+
+[PrivacyPolicyText]
+hash = "sha1-9db108ba6b7f6571356060929e37dae65878cfca"
+other = "Datenschutzerklärung"
 
 [ThemeSwitchAuto]
 hash = "sha1-c614ba7c453cdcd4d21b20e8286c6266c891e0c6"
-other = "Automatisch"
+other = "Auto"
 
 [ThemeSwitchBlack]
 hash = "sha1-ae1ef01432946b8976b9b58575b3390ab7644db2"
-other = "Dunkel"
+other = "Dark"
 
 [ThemeSwitchLight]
 hash = "sha1-a36ef8aba22905e2d2efbf1ac1d6230d5761859d"
-other = "Hell"
+other = "Light"
 
+[ThemeSwitchText]
+hash = "sha1-a797e30923ac1be590300ce6b08e63b4e6dc6688"
+other = "Theme"
