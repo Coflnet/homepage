@@ -44,6 +44,8 @@ func (s *WebServer) StartHomepage() chi.Router {
 	r := chi.NewRouter()
 	r.Get("/", s.handleHome)
 	r.Get("/impressum", s.handleImprint)
+	r.Get("/privacy-policy", s.handlePrivacyPolicy)
+	r.Get("/legal-policy", s.handleLegalPolicy)
 	r.Post("/contact", s.handleContactFormPost)
 
 	fs := http.FileServer(http.Dir("./static/"))
@@ -80,6 +82,28 @@ func (s *WebServer) handleImprint(w http.ResponseWriter, r *http.Request) {
 	websiteData := s.translator.RetrieveWebsiteData(lang)
 
 	err := tmpl.ExecuteTemplate(w, "impressum.html", websiteData)
+	if err != nil {
+		slog.Error("Error while executing template: ", "err", err)
+		return
+	}
+}
+
+func (s *WebServer) handlePrivacyPolicy(w http.ResponseWriter, r *http.Request) {
+	lang := r.Header.Get("Accept-Language")
+	websiteData := s.translator.RetrieveWebsiteData(lang)
+	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+	err := tmpl.ExecuteTemplate(w, "privacy-policy.html", websiteData)
+	if err != nil {
+		slog.Error("Error while executing template: ", "err", err)
+		return
+	}
+}
+
+func (s *WebServer) handleLegalPolicy(w http.ResponseWriter, r *http.Request) {
+	lang := r.Header.Get("Accept-Language")
+	websiteData := s.translator.RetrieveWebsiteData(lang)
+	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+	err := tmpl.ExecuteTemplate(w, "legal-policy.html", websiteData)
 	if err != nil {
 		slog.Error("Error while executing template: ", "err", err)
 		return

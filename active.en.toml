@@ -1,14 +1,15 @@
 BlogLinkText = "Blog"
 
-CoflnetDescription = """\
-Coflnet’s Skyblock Auction House History is a website that allows users to browse through over 500 million auctions, over two million players, and the bazaar of Hypixel Skyblock.\n 
-\
+CoflnetDescription = """Coflnet’s Skyblock Auction House History is a website that allows users to browse through over 500 million auctions, over two million players, and the bazaar of Hypixel Skyblock.
+\n\
 The website provides a wealth of information about current and historic prices for the auction house and bazaar, and allows users to view, search, browse, and filter by reforge or enchantment.\
-\
-In addition to the auction house history, Coflnet also offers an Item Flipper tool that helps users find profitable flips by comparing new auctions with the sell price of already finished auctions of the same item with the same or similar modifiers (e.g. enchantments) and/or comparing to lowest bin. The flipper is available in both a free and a premium version, with the premium version offering more recent flips and additional features.\
-\
+\n\
+In addition to the auction house history, Coflnet also offers an Item Flipper tool that helps users find profitable flips by comparing new auctions with the sell price of already finished auctions of the same item with the same or similar modifiers (e.g. enchantments) and/or comparing to lowest bin.\
+\n\n\
+The flipper is available in both a free and a premium version, with the premium version offering more recent flips and additional features.\
+\n\
 Coflnet also offers a mod for Hypixel Skyblock that provides users with data directly in the game. The CoflMod allows users to access price paid, the Auction Flipper, median price, lowest BIN, bazaar prices and more.\
-\
+\n\n\
 Overall, Coflnet’s Skyblock Auction House History website and associated tools provide a valuable resource for players of Hypixel Skyblock looking to stay informed about the game’s economy and make informed decisions about buying and selling items."\
 """
 
@@ -42,6 +43,8 @@ We are proud to be part of this important initiative and are committed to contin
 FDZImageCaption = "TODO generate text via image generator"
 FDZTitle = "fancy research project"
 ImprintText = "Imprint"
+LegalPolicyText = "Terms of Service"
+PrivacyPolicyText = "Privacy Policy"
 ThemeSwitchAuto = "Auto"
 ThemeSwitchBlack = "Dark"
 ThemeSwitchLight = "Light"

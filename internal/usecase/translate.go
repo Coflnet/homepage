@@ -2,6 +2,7 @@ package usecase
 
 import (
 	"log/slog"
+	"strings"
 
 	"github.com/BurntSushi/toml"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
@@ -48,11 +49,13 @@ type WebsiteData struct {
 	CompanyName        string
 	CompanyDescription string
 	ThemeSwitchText    string
-	ThemeSwitchAuto  string
-	ThemeSwitchLight string
-	ThemeSwitchBlack string
+	ThemeSwitchAuto    string
+	ThemeSwitchLight   string
+	ThemeSwitchBlack   string
 	BlogLinkText       string
 	ImprintText        string
+	LegalPolicyText    string
+	PrivacyPolicyText  string
 	ContactFormData    ContactFormData
 }
 
@@ -71,11 +74,13 @@ func (t *Translator) RetrieveWebsiteData(lang string) *WebsiteData {
 		CompanyName:        t.Translate("CompanyName", lang),
 		CompanyDescription: t.Translate("CompanyDescription", lang),
 		ThemeSwitchText:    t.Translate("ThemeSwitchText", lang),
-        ThemeSwitchAuto:  t.Translate("ThemeSwitchAuto", lang),
-        ThemeSwitchLight: t.Translate("ThemeSwitchLight", lang),
-        ThemeSwitchBlack: t.Translate("ThemeSwitchBlack", lang),
+		ThemeSwitchAuto:    t.Translate("ThemeSwitchAuto", lang),
+		ThemeSwitchLight:   t.Translate("ThemeSwitchLight", lang),
+		ThemeSwitchBlack:   t.Translate("ThemeSwitchBlack", lang),
 		BlogLinkText:       t.Translate("BlogLinkText", lang),
 		ImprintText:        t.Translate("ImprintText", lang),
+		LegalPolicyText:    t.Translate("LegalPolicyText", lang),
+		PrivacyPolicyText:  t.Translate("PrivacyPolicyText", lang),
 		ContactFormData: ContactFormData{
 			Header:      t.Translate("ContactFormHeader", lang),
 			Description: t.Translate("ContactFormDescription", lang),
@@ -103,11 +108,12 @@ func (t *Translator) RetrieveWebsiteDataWithProjects(lang string, projects []Pro
 			ImagePath:    projects[i].ImagePath,
 			ImageCaption: imageCaption,
 		}
+		slog.Info(strings.ReplaceAll(description, "\n", "<br>"))
 
 		translatedProjects[i] = translatedProject
 	}
 
-    res := t.RetrieveWebsiteData(lang)
-    res.Projects = translatedProjects
-    return res
+	res := t.RetrieveWebsiteData(lang)
+	res.Projects = translatedProjects
+	return res
 }

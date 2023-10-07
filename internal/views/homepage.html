@@ -6,7 +6,7 @@
 <!-- Main -->
 <main class="container">
 
-        {{range $project := .Projects }}
+        {{ range $project := .Projects }}
         <!-- centered figure -->
         <figure class="container" >
             <img src="{{ $project.ImagePath }}" alt="Corporate Image" class="center"/>
@@ -25,9 +25,7 @@
             <hgroup>
                 <h2>{{ $project.Title }}</h2>
             </hgroup>
-            <p>
-                {{ $project.Description }}
-            </p>
+            <p style="white-space: break-spaces;">{{ $project.Description }}</p>
         </section>
         {{end}}
 </main>
