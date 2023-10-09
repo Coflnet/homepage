@@ -8,10 +8,12 @@
 
         {{ range $project := .Projects }}
         <!-- centered figure -->
+        <a href="https://sky.coflnet.com" target="_blank">
         <figure class="container" >
             <img src="{{ $project.ImagePath }}" alt="Corporate Image" class="center"/>
         </figure>
 
+        </a>
         <style>
 .center {
   display: block;
@@ -23,7 +25,7 @@
 
         <section>
             <hgroup>
-                <h2>{{ $project.Title }}</h2>
+                <a href="https://sky.coflnet.com" target="_blank"> <h2>{{ $project.Title }}</h2> </a>
             </hgroup>
             <p style="white-space: break-spaces;">{{ $project.Description }}</p>
         </section>
