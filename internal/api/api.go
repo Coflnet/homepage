@@ -45,7 +45,7 @@ func (s *WebServer) StartHomepage() chi.Router {
 	r.Get("/", s.handleHome)
 	r.Get("/impressum", s.handleImprint)
 	r.Get("/privacy-policy", s.handlePrivacyPolicy)
-	r.Get("/legal-policy", s.handleLegalPolicy)
+	r.Get("/legal", s.handleLegalPolicy)
 	r.Post("/contact", s.handleContactFormPost)
 
 	fs := http.FileServer(http.Dir("./static/"))
