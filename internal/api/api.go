@@ -4,6 +4,7 @@ import (
 	"html/template"
 	"log/slog"
 	"net/http"
+	"strings"
 
 	"github.com/Coflnet/homepage/internal/usecase"
 	"github.com/go-chi/chi/v5"
@@ -90,8 +91,19 @@ func (s *WebServer) handleImprint(w http.ResponseWriter, r *http.Request) {
 
 func (s *WebServer) handlePrivacyPolicy(w http.ResponseWriter, r *http.Request) {
 	lang := r.Header.Get("Accept-Language")
-	websiteData := s.translator.RetrieveWebsiteData(lang)
 	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+	websiteData := s.translator.RetrieveWebsiteData(lang)
+	slog.Debug("privacy page called", "lang", lang)
+
+	if strings.HasPrefix(lang, "de-DE") {
+		err := tmpl.ExecuteTemplate(w, "privacy-policy-de.html", websiteData)
+		if err != nil {
+			slog.Error("Error while executing template: ", "err", err)
+			return
+		}
+		return
+	}
+
 	err := tmpl.ExecuteTemplate(w, "privacy-policy.html", websiteData)
 	if err != nil {
 		slog.Error("Error while executing template: ", "err", err)
@@ -103,6 +115,17 @@ func (s *WebServer) handleLegalPolicy(w http.ResponseWriter, r *http.Request) {
 	lang := r.Header.Get("Accept-Language")
 	websiteData := s.translator.RetrieveWebsiteData(lang)
 	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+	slog.Debug("legal page called", "lang", lang)
+
+	if strings.HasPrefix(lang, "de-DE") {
+		err := tmpl.ExecuteTemplate(w, "legal-policy-de.html", websiteData)
+		if err != nil {
+			slog.Error("Error while executing template: ", "err", err)
+			return
+		}
+		return
+	}
+
 	err := tmpl.ExecuteTemplate(w, "legal-policy.html", websiteData)
 	if err != nil {
 		slog.Error("Error while executing template: ", "err", err)
