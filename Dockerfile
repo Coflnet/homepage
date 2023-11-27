@@ -1,5 +1,5 @@
 # build stage
-FROM golang:1.21-bookworm as builder
+FROM registry.suse.com/bci/golang:1.21 as builder
 
 WORKDIR /app
 # ENV GO111MODULE=on
@@ -16,7 +16,7 @@ RUN CGO_ENABLED=0 go build ./cmd/homepage/main.go
 
 # final stage
 # add scratch when dev is done
-FROM alpine:3
+FROM registry.suse.com/bci/bci-micro:15.5
 
 COPY --from=builder /app/main /app/
 COPY --from=builder /app/internal/views /app/internal/views
