@@ -14,8 +14,6 @@ COPY . .
 RUN CGO_ENABLED=0 go build ./cmd/homepage/main.go
 
 
-# final stage
-# add scratch when dev is done
 FROM registry.suse.com/bci/bci-micro:15.5
 
 COPY --from=builder /app/main /app/
