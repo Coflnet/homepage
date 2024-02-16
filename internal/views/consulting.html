@@ -1,37 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/by4ZnvAcCZb
+-->
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Consulting Coflnet</title>
+</head>
+<body>
 
-{{ template "header.html" . }}
 
-<!-- Main -->
-<main class="container">
-
-        {{range $project := .Projects }}
-        <section>
-            <hgroup>
-                <h2>{{ $project.Title }}</h2>
-            </hgroup>
-            <p>
-                {{ $project.Description }}
-            </p>
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/awsIf5Sz1BF
+-->
+<div class="flex flex-col min-h-[100dvh]">
+    <header class="sticky top-0 z-10 bg-white shadow-sm dark:bg-gray-950">
+        <div class="container px-4 lg:px-6">
+            <nav class="h-14 flex items-center"><a class="flex items-center justify-center" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     class="h-6 w-6">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <path d="M12 2v2"></path>
+                    <path d="M12 20v2"></path>
+                    <path d="m4.93 4.93 1.41 1.41"></path>
+                    <path d="m17.66 17.66 1.41 1.41"></path>
+                    <path d="M2 12h2"></path>
+                    <path d="M20 12h2"></path>
+                    <path d="m6.34 17.66-1.41 1.41"></path>
+                    <path d="m19.07 4.93-1.41 1.41"></path>
+                </svg>
+                <span class="sr-only">Acme Inc</span></a>
+                <div class="ml-auto flex items-center gap-4 sm:gap-6"><a
+                        class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                    About Us
+                </a><a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                    Services
+                </a><a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                    Industries
+                </a><a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                    Case Studies
+                </a><a class="text-sm font-medium hover:underline underline-offset-4" href="#">
+                    Contact
+                </a></div>
+            </nav>
+        </div>
+    </header>
+    <main class="flex-1">
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10">
+                <div class="space-y-2"><h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">
+                    Cloud-Native Services
+                </h1>
+                    <p class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                        Innovate
+                    </p></div>
+                <div class="mx-auto w-full max-w-3xl space-y-4"><p
+                        class="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    We help companies embrace the cloud, modernize their
+                    applications, and build scalable, resilient, and secure
+                    infrastructure. Our team of experts will guide you through the
+                    entire process, from strategy to implementation, leveraging the
+                    best cloud-native technologies.
+                </p></div>
+            </div>
         </section>
-        <aside>
-            <figure>
-                <img src="{{ $project.ImagePath }}" alt="Corporate Image" height="800" width="600"/>
-                <figcaption>
-                    {{ $project.ImageCaption }}
-                </figcaption>
-            </figure>
-        </aside>
-        {{end}}
-</main>
-
-<!-- Subscribe <-</-->
-{{ template "contact-form.html" .ContactFormData }}
-
-<!-- ./ Subscribe -->
-
-{{ template "footer.html" . }}
-
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+            <div class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10">
+                <div class="space-y-2"><h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">
+                    Programming
+                </h2>
+                    <p class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                        Code
+                    </p></div>
+                <div class="mx-auto w-full max-w-3xl space-y-4"><p
+                        class="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Our team of experienced developers is ready to turn your ideas
+                    into reality. We specialize in web and mobile app development,
+                    using the latest frameworks and tools to create elegant,
+                    performant, and user-friendly applications.
+                </p></div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10">
+                <div class="space-y-2"><h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">
+                    Data Processing
+                </h2>
+                    <p class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                        Insights
+                    </p></div>
+                <div class="mx-auto w-full max-w-3xl space-y-4"><p
+                        class="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                    Make the most of your data with our data processing and
+                    analytics services. We can help you collect, store, and analyze
+                    data from various sources, providing valuable insights that
+                    drive informed decision-making and business growth.
+                </p></div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10">
+                <div class="space-y-2"><h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">
+                    Projects
+                </h2>
+                    <p class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                        Impressive Stats
+                    </p></div>
+                <div class="mx-auto w-full max-w-3xl space-y-4">
+                    <div class="grid gap-6 md:grid-cols-3">
+                        <div class="bg-white p-4 rounded-lg shadow-md dark:bg-gray-950"><img src="/placeholder.svg"
+                                                                                             alt="Project 1" width="400"
+                                                                                             height="250"
+                                                                                             class="object-cover rounded-lg"
+                                                                                             style="aspect-ratio: 400 / 250; object-fit: cover;">
+                            <h3 class="text-xl font-semibold mt-4">Project 1</h3>
+                            <p class="text-gray-500">Short summary of Project 1</p>
+                            <div class="text-sm text-gray-500">Stats for Project 1</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md dark:bg-gray-950"><img src="/placeholder.svg"
+                                                                                             alt="Project 2" width="400"
+                                                                                             height="250"
+                                                                                             class="object-cover rounded-lg"
+                                                                                             style="aspect-ratio: 400 / 250; object-fit: cover;">
+                            <h3 class="text-xl font-semibold mt-4">Project 2</h3>
+                            <p class="text-gray-500">Short summary of Project 2</p>
+                            <div class="text-sm text-gray-500">Stats for Project 2</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-md dark:bg-gray-950"><img src="/placeholder.svg"
+                                                                                             alt="Project 3" width="400"
+                                                                                             height="250"
+                                                                                             class="object-cover rounded-lg"
+                                                                                             style="aspect-ratio: 400 / 250; object-fit: cover;">
+                            <h3 class="text-xl font-semibold mt-4">Project 3</h3>
+                            <p class="text-gray-500">Short summary of Project 3</p>
+                            <div class="text-sm text-gray-500">Stats for Project 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="w-full py-12 md:py-24 lg:py-32">
+            <div class="container grid items-center gap-6 px-4 text-center md:px-6 lg:gap-10">
+                <div class="space-y-2"><h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl/none">
+                    Contact Form
+                </h2>
+                    <p class="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-gray-800">
+                        Get in Touch
+                    </p></div>
+                <div class="mx-auto w-full max-w-3xl space-y-4">
+                    <form class="flex flex-col space-y-4"><input
+                            class="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+                            placeholder="First Name" type="text"><input
+                            class="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+                            placeholder="Last Name" type="text"><input
+                            class="flex h-10 rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+                            placeholder="Email" type="email"><textarea
+                            class="flex min-h-[80px] rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 w-full"
+                            placeholder="Message"></textarea>
+                        <button class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t"><p
+            class="text-xs text-gray-500 dark:text-gray-400">
+        © 2024 Acme Inc. All rights reserved.
+    </p>
+        <nav class="sm:ml-auto flex gap-4 sm:gap-6"><a class="text-xs hover:underline underline-offset-4" href="#">
+            Terms of Service
+        </a><a class="text-xs hover:underline underline-offset-4" href="#">
+            Privacy
+        </a></nav>
+    </footer>
+</div>
 </body>
 </html>

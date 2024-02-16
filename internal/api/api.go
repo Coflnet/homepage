@@ -57,9 +57,23 @@ func (s *WebServer) StartHomepage() chi.Router {
 
 func (s *WebServer) StartConsultingPage() chi.Router {
 	r := chi.NewRouter()
-	r.Get("/", s.handleHome)
+	r.Get("/", s.handleConsultingHomePage)
 
 	return r
+}
+
+func (s *WebServer) handleConsultingHomePage(w http.ResponseWriter, r *http.Request) {
+	lang := r.Header.Get("Accept-Language")
+
+	tmpl := template.Must(template.ParseGlob("./internal/views/*.html"))
+	projects := s.config.ListProjects()
+	websiteData := s.translator.RetrieveWebsiteDataWithProjects(lang, projects)
+
+	err := tmpl.ExecuteTemplate(w, "consulting.html", websiteData)
+	if err != nil {
+		slog.Error("Error while executing template: ", "err", err)
+		return
+	}
 }
 
 func (s *WebServer) handleHome(w http.ResponseWriter, r *http.Request) {
