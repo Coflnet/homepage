@@ -1,5 +1,5 @@
 <footer class="container">
-    <small>
+    <span>
         <div class="grid">
             <div>
                 <a href="/impressum">{{ .ImprintText }}</a>
@@ -10,15 +10,24 @@
             <div>
                 <a href="/privacy">{{ .PrivacyPolicyText }}</a>
             </div>
+
             <div>
-                <a href="https://suse.com" target="_blank">
+                <a href="https://suse.com" target="_blank" rel="noreferrer">
                     <figure class="container">
-                        <img src="/static/sapphire_batch.png" alt="SUSE Sapphire batch" width="50%"/>
+                        <img src="/static/sapphire_batch.png" alt="SUSE Sapphire batch" width="70%"/>
+                    </figure>
+                </a>
+            </div>
+
+            <div>
+                <a class="navigation__logo" href="https://www.bvmw.de/de/" title="Startseite" rel="noreferrer" target="_blank">
+                    <figure class="container">
+                        <img src="/static/bvmw_logo.png" alt="BVMW Logo" width="70%"/>
                     </figure>
                 </a>
             </div>
         </div>
-    </small>
+    </span>
 
     <script src="static/theme-switcher.js"></script>
 </footer>
